@@ -113,7 +113,7 @@ const (
 func makeAPIRequest(url string) ([]byte, error) {
 	// Build an http client so we can have control over timeout
 	client := &http.Client{
-		Timeout: time.Second * 2,
+		Timeout: time.Second * 60,
 	}
 
 	res, getErr := client.Get(url)
